@@ -1,0 +1,207 @@
+/* 全体の基本スタイル */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, "Hiragino Sans", "Yu Gothic", sans-serif;
+  background: #f5f6f8;
+  color: #222;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.center {
+  text-align: center;
+  margin-top: 80px;
+}
+
+/* ログイン・会員登録フォーム */
+.auth-container {
+  max-width: 360px;
+  margin: 80px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.auth-container h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.auth-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.switch-link {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 14px;
+  margin: 0;
+}
+
+.success {
+  color: #16a34a;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* 物件一覧画面 */
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-email {
+  font-size: 14px;
+  color: #666;
+}
+
+.secondary-button {
+  background: #6b7280;
+}
+
+.danger-button {
+  background: #dc2626;
+}
+
+/* 物件登録フォームの枠 */
+.panel {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.panel h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+/* 物件の登録・編集フォーム */
+.property-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.property-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.property-form input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.property-form .error {
+  grid-column: 1 / -1;
+}
+
+.form-buttons,
+.card-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.card-buttons {
+  margin-top: 16px;
+}
+
+.empty {
+  color: #666;
+}
+
+/* カードを画面幅に合わせて並べる */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.rent {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.area {
+  margin: 0;
+  color: #666;
+}

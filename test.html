@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>動作確認テスト</title>
+    <style>
+      /* テストページ用の最小限のスタイル */
+      body {
+        margin: 0;
+        padding: 24px 16px;
+        font-family: system-ui, "Hiragino Sans", "Yu Gothic", sans-serif;
+        background: #f5f6f8;
+        color: #222;
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      .box {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        margin-bottom: 16px;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        padding: 4px 12px 4px 0;
+      }
+      code {
+        background: #eef;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+      button {
+        padding: 10px 16px;
+        border: none;
+        border-radius: 6px;
+        background: #2563eb;
+        color: #fff;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.6;
+      }
+      #log li {
+        margin: 6px 0;
+      }
+      .ok {
+        color: #16a34a;
+      }
+      .ng {
+        color: #dc2626;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>動作確認テスト</h1>
+
+      <div class="box">
+        <h2>テスト用ユーザー</h2>
+        <table>
+          <tr><td>メールアドレス</td><td><code>testuser@example.com</code></td></tr>
+          <tr><td>パスワード</td><td><code>TestPass1234</code></td></tr>
+        </table>
+        <p>
+          アプリ本体で手動確認する場合は <a href="/login">ログイン画面</a> で上記を入力してください。
+        </p>
+      </div>
+
+      <div class="box">
+        <h2>自動テスト（ログイン → 物件の一覧・登録・編集・削除 → ログアウト）</h2>
+        <button id="run">テストを実行</button>
+        <ol id="log"></ol>
+      </div>
+    </main>
+
+    <script type="module" src="/src/test-flow.js"></script>
+  </body>
+</html>
